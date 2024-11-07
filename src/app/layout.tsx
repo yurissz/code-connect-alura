@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Aside } from "@/components/Aside";
 import { Prompt } from 'next/font/google'
+import { SearchForm } from "@/components/SearchForm";
 
 export const metadata: Metadata = {
   title: "Code Connect",
@@ -27,6 +28,7 @@ export default function RootLayout({
             <Aside />
           </div>
           <div className='main-content'>
+            <SearchForm />
             {children}
           </div>
         </div>
