@@ -61,7 +61,7 @@ export default async function Home({ searchParams }: { searchParams: SearchParam
   const { data: posts, prev, next }: PaginacaoI = await getAllPosts(Number(currentPage), searchTerm)
   return (
     <main className={styles.grid}>
-      {posts.map((post: PostI) => <CardPost key={post.id} post={post} />
+      {posts.map((post: PostI) => <CardPost key={post.id} post={post} hightlight />
       )}
       <div className={styles.links}>
         {prev && <Link href={{ pathname: '/', query: { page: prev, q: searchTerm } }} >Pagina Anterior</Link>}

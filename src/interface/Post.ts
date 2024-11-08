@@ -18,5 +18,6 @@ export interface PostArrayI {
 }
 
 export interface OnePostI {
-    post: PostI
+    post: PostI;
+    hightlight: boolean;
 }
